@@ -565,7 +565,8 @@
 <script>
 import { defineComponent,ref } from 'vue';
 
-import { Editor, EditorContent, BubbleMenu, VueNodeViewRenderer  } from "@tiptap/vue-3";
+import { Editor, EditorContent, VueNodeViewRenderer } from "@tiptap/vue-3";
+import { BubbleMenu } from "@tiptap/vue-3/menus";
 //  Import extensions
 import CodeBlockLowlight from '@tiptap/extension-code-block-lowlight'
 
@@ -574,10 +575,7 @@ import { LanguageTool } from './languagetool'
 import Highlight from "@tiptap/extension-highlight";
 import Underline from "@tiptap/extension-underline";
 import StarterKit from "@tiptap/starter-kit";
-import Table from "@tiptap/extension-table";
-import TableCell from "@tiptap/extension-table-cell";
-import TableRow from "@tiptap/extension-table-row";
-import TableHeader from "@tiptap/extension-table-header";
+import { Table, TableCell, TableRow, TableHeader } from "@tiptap/extension-table";
 import Link from "@tiptap/extension-link";
 import CustomImage from "./editor-image";
 //import Caption from "./editor-caption";
@@ -586,7 +584,7 @@ import { TriggerMenuExtension } from './internal-link';
 import {v4 as uuidv4} from 'uuid';
 import UserService from '@/services/user';
 import Collaboration from '@tiptap/extension-collaboration'
-import CollaborationCursor from '@tiptap/extension-collaboration-cursor'
+import CollaborationCaret from '@tiptap/extension-collaboration-caret'
 import { HocuspocusProvider } from '@hocuspocus/provider'
 import * as Y from 'yjs'
 
@@ -802,7 +800,7 @@ export default defineComponent({
           document: ydoc,
           field: this.fullId
       }))
-      extensionEditor.push(CollaborationCursor.configure({
+      extensionEditor.push(CollaborationCaret.configure({
           provider: this.provider,
           user: {
             name:  this.username,
