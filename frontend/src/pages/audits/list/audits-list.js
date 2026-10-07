@@ -68,12 +68,6 @@ export default {
             selectedAuditToClone: null,
             // Available audits for cloning
             availableAuditsForCloning: [],
-            // Clone existing report toggle
-            cloneExistingReport: false,
-            // Selected audit to clone
-            selectedAuditToClone: null,
-            // Available audits for cloning
-            availableAuditsForCloning: [],
             // Master copy for sorting and filtering
             auditsForCloningMaster: []
         }
