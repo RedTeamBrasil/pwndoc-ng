@@ -21,6 +21,7 @@ module.exports = function(request, app) {
                 "noneColor": "#4a86e8",
               },
               "extendCvssTemporalEnvironment": false,
+              "defaultCvssVersion": "3.1",
               "remediationColorsComplexity": {
                 "highColor": "#FF2F2F",
                 "lowColor": "#4472c4",
@@ -68,6 +69,7 @@ module.exports = function(request, app) {
                 "noneColor": "#4a86e8",
               },
               "extendCvssTemporalEnvironment": false,
+              "defaultCvssVersion": "3.1",
               "remediationColorsComplexity": {
                 "highColor": "#FF2F2F",
                 "lowColor": "#4472c4",
@@ -139,6 +141,7 @@ module.exports = function(request, app) {
                   "noneColor": "#123456",
                 },
                 "extendCvssTemporalEnvironment": false,
+                "defaultCvssVersion": "3.1",
                 "remediationColorsComplexity": {
                   "highColor": "#FF2F2F",
                   "lowColor": "#4472c4",
